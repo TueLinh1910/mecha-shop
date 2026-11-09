@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - Mecha Hangar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="logo">Mecha Hangar</h1>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="san-pham.html">Sản phẩm</a>
+            <a href="gio-hang.html">Giỏ hàng</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Tất cả sản phẩm</h2>
+
+        <div class="toolbar">
+            <input type="text" id="search-input" class="search-input" placeholder="Tìm kiếm sản phẩm ...">
+
+            <div class="filter-group">
+                <label for="brand-filter">Hãng:</label>
+                <select id="brand-filter">
+                    <option value="all">Tất cả</option>
+                    <option value="motor-nuclear">Motor Nuclear</option>
+                    <option value="in-era">In Era+</option>
+                    <option value="sunday-hobby">Sunday Hobby</option>
+                    <option value="einta">EINTA INDUSTRIES</option>
+                    <option value="snaa">SNAA</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sort-select">Sắp xếp:</label>
+                <select id="sort-select">
+                    <option value="default">Mặc định</option>
+                    <option value="price-asc">Giá thấp đến cao</option>
+                    <option value="price-desc">Giá cao đến thấp</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="scale-filter">Tỉ lệ:</label>
+                <select id="scale-filter">
+                    <option value="all">Tất cả</option>
+                    <option value="1-100">1/100</option>
+                    <option value="1-72">1/72</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Dian+Wei" alt="Model kit Dian Wei">
+                <h3><a href="chi-tiet.html">[Motor Nuclear] Dian Wei</a></h3>
+                <p>Tỉ lệ: 1/100</p>
+                <p class="price">750.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Lizard+Polar+Shark" alt="Model kit Lizard Polar Shark">
+                <h3>[In Era+] Lizard Polar Shark</h3>
+                <p>Tỉ lệ: 1/100</p>
+                <p class="price">1.200.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Ji+Hu" alt="Model kit Ji-Hu">
+                <h3>[Motor Nuclear] Ji-Hu</h3>
+                <p>Tỉ lệ: 1/100</p>
+                <p class="price">820.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Fenrir" alt="Model kit Fenrir">
+                <h3>[In Era+] Fenrir</h3>
+                <p>Tỉ lệ: 1/72</p>
+                <p class="price">1.450.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Xiao+Yao+Di" alt="Model kit Xiao Yao Di">
+                <h3>[Sunday Hobby] Xiao Yao Di</h3>
+                <p>Tỉ lệ: 1/100</p>
+                <p class="price">960.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Sky+Defender" alt="Model kit Sky Defender">
+                <h3>[EINTA-INDUSTRIES] Sky Defender</h3>
+                <p>Tỉ lệ: 1/72</p>
+                <p class="price">1.900.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Azure+Falcon" alt="Model kit Azure Falcon">
+                <h3>[In Era+] Azure Falcon</h3>
+                <p>Tỉ lệ: 1/100</p>
+                <p class="price">1.000.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Nether+Emperor+Full+Armor"
+                    alt="Model kit Nether Emperor Full Armor">
+                <h3>[SNAA] Nether Emperor Full Armor</h3>
+                <p>Tỉ lệ: 1/100</p>
+                <p class="price">750.000đ</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Mecha Hangar. Dự án học tập, phi thương mại</p>
+    </footer>
+
+</body>
+
+</html>
