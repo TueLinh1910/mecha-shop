@@ -73,4 +73,58 @@ console.log(`Tong so san pham trong kho la: ${products.length}`);
 
 console.log(`${products[1].name} của hãng ${products[1].brand}, tỉ lệ ${products[1].scale}, giá ${products[1].price} đồng`);
 
+products.push(
+    {
+        id: 9,
+        name: "Haoling Baidi",
+        brand: "GS-Toys",
+        scale: "1/100",
+        price: 1300000,
+        inStock: true
+    }
+);
 
+console.log(`Tổng số sản phẩm: ${products.length}`);
+
+
+for (const product of products) {
+    if (product.inStock) {
+        console.log(`${product.id}. ${product.name} - ${product.price.toLocaleString("vi-VN")} đ - Còn hàng`);
+
+    } else {
+        console.log(`${product.id}. ${product.name} - ${product.price.toLocaleString("vi-VN")} đ - Hết hàng`);
+    }
+}
+
+console.log(`Sản phẩm hãng In Era+: `);
+for (const product of products) {
+    if (product.brand == "In Era+") {
+        console.log(`${product.name}`);
+    }
+}
+
+let totalPrice = 0;
+for (const product of products) {
+    totalPrice = totalPrice + product.price;
+}
+console.log(`Tong gia tien toan kho: ${totalPrice.toLocaleString("vi-VN")} đ`);
+
+let inStockCount = 0;
+for (const product of products) {
+    if (product.inStock) {
+        inStockCount = inStockCount + 1;
+    }
+}
+console.log(`So luong san pham con hang: ${inStockCount}`);
+
+let maxPriceProduct = 0;
+for (const product of products) {
+    if (product.price > maxPriceProduct) {
+        maxPriceProduct = product.price;
+    }
+}
+for (const product of products) {
+    if (product.price == maxPriceProduct) {
+        console.log(`San pham dat nhat la: ${product.name} cua hang ${product.brand} voi gia la ${product.price.toLocaleString("vi-VN")}đ`);
+    }
+}
