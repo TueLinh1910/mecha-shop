@@ -276,6 +276,11 @@ select {
     color: #1461c5;
 }
 
+.out-of-stock {
+    color: #690202;
+    font-weight: bold;
+}
+
 @media (max-width: 900px) {
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
