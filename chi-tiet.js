@@ -44,6 +44,13 @@ if (product === null) {
 
     addToCartButton.addEventListener("click", function () {
         const quantity = Number(quantityInput.value);
+
+        if (!Number.isInteger(quantity) || quantity < 1 || quantity > 10) {
+            alert("Số lượng không hợp lệ. Vui lòng nhập số nguyên từ 1 đến 10.");
+            return;
+        }
+
+        addToCart(product.id, quantity);
         alert(`Đã thêm ${quantity} hộp ${product.name} vào giỏ hàng!`);
     });
 
