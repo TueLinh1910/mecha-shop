@@ -143,6 +143,7 @@ main {
 }
 
 .search-input:focus,
+select:focus,
 .quantity-input:focus {
     outline: none;
     border-color: #1461c5;
@@ -198,8 +199,12 @@ select {
     border-color: #1461c5;
 }
 
+.thumbnails img.active {
+    border-color: #1461c5;
+}
+
 .brand {
-    corlor: #777777;
+    color: #777777;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 14px;
@@ -279,6 +284,11 @@ select {
 .out-of-stock {
     color: #690202;
     font-weight: bold;
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    pointer-events: none;
 }
 
 @media (max-width: 900px) {
