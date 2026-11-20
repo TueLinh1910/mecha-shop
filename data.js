@@ -12,7 +12,8 @@ const products = [
             "images/dian-wei-3.webp",
             "images/dian-wei-4.webp"
         ],
-        description: "Mô hình lắp ráp Motor Nuclear MNP-XH16 Điển Vi (Dian Wei) mang đến tạo hình “Cổ Chi Ác Lai” cực kỳ ma mị và cuồng bạo. Điểm nhấn của cỗ máy nằm ở bộ khung xương kim loại siêu đầm chắc, kết hợp cùng hệ thống áo choàng phản lực đồ sộ phía sau có thể bung mở thành đôi cánh sắc lẹm."
+        description: "Mô hình lắp ráp Motor Nuclear MNP-XH16 Điển Vi (Dian Wei) mang đến tạo hình “Cổ Chi Ác Lai” cực kỳ ma mị và cuồng bạo. Điểm nhấn của cỗ máy nằm ở bộ khung xương kim loại siêu đầm chắc, kết hợp cùng hệ thống áo choàng phản lực đồ sộ phía sau có thể bung mở thành đôi cánh sắc lẹm.",
+        featured: true
     },
     {
         id: 2,
@@ -27,7 +28,8 @@ const products = [
             "images/lizard-3.webp",
             "images/lizard-4.webp"
         ],
-        description: "Mô hình lắp ráp IN ERA+ LIZARD 1/100 (Bản Polar Shark) thuộc dòng RMD (Real Minutia Designs) nổi tiếng với hệ khung xương nhựa toàn diện cực kỳ sắc nét và vững chãi. Phiên bản Polar Shark gây ấn tượng mạnh với phối màu Trắng-Xanh lạnh lùng, bề mặt giáp bám màu lý tưởng cho anh em thỏa sức tỉa tót bằng màu acrylic. Đặc biệt, cỗ máy sở hữu dàn vũ khí hạng nặng áp đảo với bộ đôi pháo Gatling khổng lồ và Đại rìu năng lượng (Thermal Axe) đính kèm các dải hiệu ứng màu xanh lam trong suốt tuyệt đẹp. Tặng kèm Decal nước và Base trưng bày chính hãng."
+        description: "Mô hình lắp ráp IN ERA+ LIZARD 1/100 (Bản Polar Shark) thuộc dòng RMD (Real Minutia Designs) nổi tiếng với hệ khung xương nhựa toàn diện cực kỳ sắc nét và vững chãi. Phiên bản Polar Shark gây ấn tượng mạnh với phối màu Trắng-Xanh lạnh lùng, bề mặt giáp bám màu lý tưởng cho anh em thỏa sức tỉa tót bằng màu acrylic. Đặc biệt, cỗ máy sở hữu dàn vũ khí hạng nặng áp đảo với bộ đôi pháo Gatling khổng lồ và Đại rìu năng lượng (Thermal Axe) đính kèm các dải hiệu ứng màu xanh lam trong suốt tuyệt đẹp. Tặng kèm Decal nước và Base trưng bày chính hãng.",
+        featured: true
     },
     {
         id: 3,
@@ -57,7 +59,8 @@ const products = [
             "images/fenrir-3.webp",
             "images/fenrir-4.webp"
         ],
-        description: "Thuộc dòng sản phẩm RMD (Real Minutia Design) danh tiếng, Fenrir không chỉ là một mô hình lắp ráp đơn thuần, mà là một kiệt tác cơ khí lấy cảm hứng từ thần thoại Sói Fenrir. Với chiều cao khủng khiếp lên tới 27cm-30cm (tương đương Perfect Grade của Bandai), bộ kit này mang lại cảm giác đồ sộ, hầm hố và chi tiết đến kinh ngạc."
+        description: "Thuộc dòng sản phẩm RMD (Real Minutia Design) danh tiếng, Fenrir không chỉ là một mô hình lắp ráp đơn thuần, mà là một kiệt tác cơ khí lấy cảm hứng từ thần thoại Sói Fenrir. Với chiều cao khủng khiếp lên tới 27cm-30cm (tương đương Perfect Grade của Bandai), bộ kit này mang lại cảm giác đồ sộ, hầm hố và chi tiết đến kinh ngạc.",
+        featured: true
     },
     {
         id: 5,
@@ -117,7 +120,8 @@ const products = [
             "images/nether-emperor-3.webp",
             "images/nether-emperor-4.webp"
         ],
-        description: "Sự trở lại đầy uy lực từ hãng SNAA với siêu phẩm YR-05 Nether Emperor FA (Minh Hoàng - Phiên bản trang bị cánh chim ưng Falcon). Trái ngược hoàn toàn với các thiết kế thánh thiện trước đây, Nether Emperor mang đến một sắc thái hắc ám, gai góc và đầy quyền lực."
+        description: "Sự trở lại đầy uy lực từ hãng SNAA với siêu phẩm YR-05 Nether Emperor FA (Minh Hoàng - Phiên bản trang bị cánh chim ưng Falcon). Trái ngược hoàn toàn với các thiết kế thánh thiện trước đây, Nether Emperor mang đến một sắc thái hắc ám, gai góc và đầy quyền lực.",
+        featured: true
     },
     {
         id: 9,
@@ -162,4 +166,21 @@ function findProductById(id) {
         }
     }
     return null;
+}
+
+function createProductCard(product) {
+    let stockLabel = "";
+    if (!product.inStock) {
+        stockLabel = `<p class="out-of-stock">Hết hàng</p>`;
+    }
+
+    return `
+        <div class="product-card">
+            <img src="${product.image}" alt="Model kit ${product.name}">
+            <h3><a href="chi-tiet.html?id=${product.id}">[${product.brand}] ${product.name}</a></h3>
+            <p>Tỉ lệ: ${product.scale}</p>
+            <p class="price">${formatPrice(product.price)}</p>
+            ${stockLabel}
+        </div>
+    `;
 }
