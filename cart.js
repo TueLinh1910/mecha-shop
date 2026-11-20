@@ -27,7 +27,7 @@ function addToCart(productId, quantity) {
     if (existingItem === null) {
         cart.push({ id: productId, quantity: quantity });
     } else {
-        existingItem.quantity += quantity;
+        existingItem.quantity = Math.min(existingItem.quantity + quantity, 10);
     }
 
     saveCart(cart);

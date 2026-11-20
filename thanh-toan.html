@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - Mecha Hangar</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <h1 class="logo">Mecha Hangar</h1>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="san-pham.html">Sản phẩm</a>
+            <a href="gio-hang.html">Giỏ hàng (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Thanh toán</h2>
+
+        <div class="checkout-layout">
+            <form id="checkout-form" class="checkout-form" novalidate>
+                <h3>Thông tin giao hàng</h3>
+
+                <div class="form-group">
+                    <label for="fullname">Họ và tên</label>
+                    <input type="text" id="fullname" class="form-control" placeholder="Nguyễn Văn A">
+                    <p class="error-message" id="fullname-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="0912345678">
+                    <p class="error-message" id="phone-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="email@example.com">
+                    <p class="error-message" id="email-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Tỉnh / Thành phố</label>
+                    <select id="city" class="form-control">
+                        <option value="">-- Chọn tỉnh / thành phố --</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Khác">Tỉnh / thành phố khác</option>
+                    </select>
+                    <p class="error-message" id="city-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Địa chỉ chi tiết</label>
+                    <input type="text" id="address" class="form-control" placeholder="Số nhà, tên đường, phường/xã">
+                    <p class="error-message" id="address-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="note">Ghi chú (không bắt buộc)</label>
+                    <textarea id="note" class="form-control" placeholder="Ví dụ: giao giờ hành chính"></textarea>
+                </div>
+
+                <h3>Phương thức thanh toán</h3>
+
+                <div class="form-group">
+                    <label class="radio-option">
+                        <input type="radio" name="payment" value="cod" checked>
+                        Thanh toán khi nhận hàng (COD)
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="payment" value="bank">
+                        Chuyển khoản ngân hàng
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Đặt hàng</button>
+            </form>
+
+            <aside class="cart-summary">
+                <h3>Đơn hàng của bạn</h3>
+                <div id="order-items"></div>
+                <div class="summary-row summary-total">
+                    <span>Tổng tiền</span>
+                    <span id="order-total">0đ</span>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Mecha Hangar. Dự án học tập, phi thương mại</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+    <script src="thanh-toan.js"></script>
+</body>
+
+</html>
