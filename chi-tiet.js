@@ -68,17 +68,30 @@ if (product === null) {
         window.location.href = "gio-hang.html";
     });
 
-    const thumbnails = document.querySelectorAll(".thumbnails img");
+        const thumbnailContainer = document.getElementById("thumbnails");
 
-    for (const thumbnail of thumbnails) {
-        thumbnail.addEventListener("click", function () {
-            mainImage.src = thumbnail.src;
+    if (product.gallery === undefined || product.gallery.length <= 1) {
+        thumbnailContainer.classList.add("hidden");
+    } else {
+        let thumbnailHtml = "";
+        for (const imagePath of product.gallery) {
+            thumbnailHtml += `<img src="${imagePath}" alt="Ảnh ${product.name}">`;
+        }
+        thumbnailContainer.innerHTML = thumbnailHtml;
 
-            for (const other of thumbnails) {
-                other.classList.remove("active");
-            }
+        const thumbnails = thumbnailContainer.querySelectorAll("img");
+        thumbnails[0].classList.add("active");
 
-            thumbnail.classList.add("active");
-        });
+        for (const thumbnail of thumbnails) {
+            thumbnail.addEventListener("click", function () {
+                mainImage.src = thumbnail.src;
+
+                for (const other of thumbnails) {
+                    other.classList.remove("active");
+                }
+
+                thumbnail.classList.add("active");
+            });
+        }
     }
 }

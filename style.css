@@ -41,6 +41,10 @@ nav a:hover {
 
 .product-card img {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #f2f2f2;
 }
 
 .price {
@@ -180,7 +184,10 @@ select {
 
 .main-image {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 12px;
+    background-color: #f2f2f2;
 }
 
 .thumbnails {
@@ -194,6 +201,8 @@ select {
     border-radius: 8px;
     border: 2px solid transparent;
     cursor: pointer;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .thumbnails img:hover {
@@ -322,6 +331,8 @@ select {
 .cart-item-image {
     width: 80px;
     border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .cart-item-info h3 {
@@ -519,7 +530,7 @@ textarea.form-control {
         gap: 24px;
     }
 
-        .cart-layout {
+    .cart-layout {
         grid-template-columns: 1fr;
     }
 
@@ -542,7 +553,7 @@ textarea.form-control {
         text-align: left;
     }
 
-        .checkout-layout {
+    .checkout-layout {
         grid-template-columns: 1fr;
     }
 }
