@@ -1,13 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const productId = Number(params.get("id"));
 
-let product = null;
-
-for (const item of products) {
-    if (item.id === productId) {
-        product = item;
-    }
-}
+const product = findProductById(productId);
 
 if (product === null) {
     document.querySelector("main").innerHTML = `
@@ -29,29 +23,49 @@ if (product === null) {
     document.getElementById("spec-scale").textContent = product.scale;
     document.getElementById("spec-brand").textContent = product.brand;
 
+    const addToCartButton = document.getElementById("add-to-cart");
+    const buyNowButton = document.getElementById("buy-now");
+    const quantityInput = document.getElementById("quantity");
+
     const statusCell = document.getElementById("spec-status");
     if (product.inStock) {
         statusCell.textContent = "Còn hàng";
     } else {
         statusCell.textContent = "Hết hàng";
         statusCell.classList.add("out-of-stock");
-        document.getElementById("add-to-cart").disabled = true;
-        document.getElementById("buy-now").disabled = true;
+        addToCartButton.disabled = true;
+        buyNowButton.disabled = true;
     }
 
-    const addToCartButton = document.getElementById("add-to-cart");
-    const quantityInput = document.getElementById("quantity");
-
-    addToCartButton.addEventListener("click", function () {
+    function getValidQuantity() {
         const quantity = Number(quantityInput.value);
 
         if (!Number.isInteger(quantity) || quantity < 1 || quantity > 10) {
             alert("Số lượng không hợp lệ. Vui lòng nhập số nguyên từ 1 đến 10.");
+            return null;
+        }
+
+        return quantity;
+    }
+
+    addToCartButton.addEventListener("click", function () {
+        const quantity = getValidQuantity();
+        if (quantity === null) {
             return;
         }
 
         addToCart(product.id, quantity);
         alert(`Đã thêm ${quantity} hộp ${product.name} vào giỏ hàng!`);
+    });
+
+    buyNowButton.addEventListener("click", function () {
+        const quantity = getValidQuantity();
+        if (quantity === null) {
+            return;
+        }
+
+        addToCart(product.id, quantity);
+        window.location.href = "gio-hang.html";
     });
 
     const thumbnails = document.querySelectorAll(".thumbnails img");

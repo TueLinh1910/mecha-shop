@@ -104,3 +104,12 @@ const products = [
 function formatPrice(price) {
     return `${price.toLocaleString("vi-VN")}đ`;
 }
+
+function findProductById(id) {
+    for (const product of products) {
+        if (product.id === id) {
+            return product;
+        }
+    }
+    return null;
+}

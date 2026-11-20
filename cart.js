@@ -34,6 +34,36 @@ function addToCart(productId, quantity) {
     updateCartCount();
 }
 
+function changeQuantity(productId, amount) {
+    const cart = getCart();
+
+    for (const item of cart) {
+        if (item.id === productId) {
+            const newQuantity = item.quantity + amount;
+            if (newQuantity >= 1 && newQuantity <= 10) {
+                item.quantity = newQuantity;
+            }
+        }
+    }
+
+    saveCart(cart);
+    updateCartCount();
+}
+
+function removeFromCart(productId) {
+    const cart = getCart();
+    const newCart = [];
+
+    for (const item of cart) {
+        if (item.id !== productId) {
+            newCart.push(item);
+        }
+    }
+
+    saveCart(newCart);
+    updateCartCount();
+}
+
 function updateCartCount() {
     const cart = getCart();
 

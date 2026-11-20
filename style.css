@@ -298,6 +298,122 @@ select {
     padding: 40px 0;
 }
 
+.hidden {
+    display: none;
+}
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto auto;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cart-item-image {
+    width: 80px;
+    border-radius: 8px;
+}
+
+.cart-item-info h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+}
+
+.cart-item-info h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cart-item-info .price {
+    margin: 4px 0 0;
+    font-size: 15px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.qty-btn:hover {
+    border-color: #1461c5;
+    color: #1461c5;
+}
+
+.line-total {
+    margin: 0;
+    min-width: 110px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #c62828;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.cart-summary {
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.cart-summary h3 {
+    margin-top: 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.summary-total {
+    font-size: 20px;
+    font-weight: bold;
+    border-top: 1px solid #eeeeee;
+    padding-top: 12px;
+}
+
+.checkout-btn {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 40px 0;
+}
+
 @media (max-width: 900px) {
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -334,5 +450,28 @@ select {
     .product-detail {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+        .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-item {
+        grid-template-columns: 64px 1fr;
+    }
+
+    .cart-item-image {
+        width: 64px;
+    }
+
+    .quantity-control,
+    .line-total,
+    .remove-btn {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .line-total {
+        text-align: left;
     }
 }
