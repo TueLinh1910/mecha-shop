@@ -342,6 +342,10 @@ select {
     align-items: start;
 }
 
+.cart-layout:has(.hidden) {
+    grid-template-columns: 1fr;
+}
+
 .cart-item {
     display: grid;
     grid-template-columns: 80px 1fr auto auto auto;
@@ -446,7 +450,13 @@ select {
 
 .empty-cart {
     text-align: center;
-    padding: 40px 0;
+    padding: 80px 0;
+}
+
+.empty-cart p {
+    font-size: 18px;
+    color: #777777;
+    margin-bottom: 24px;
 }
 
 .checkout-layout {
@@ -578,5 +588,17 @@ textarea.form-control {
 
     .checkout-layout {
         grid-template-columns: 1fr;
+    }
+
+        .product-card {
+        padding: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 15px;
+    }
+
+    .product-grid {
+        gap: 12px;
     }
 }

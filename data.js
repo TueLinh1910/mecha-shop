@@ -8,6 +8,7 @@ const products = [
         inStock: true,
         image: "images/dian-wei-1.webp",
         gallery: [
+            "images/dian-wei-1.webp",
             "images/dian-wei-2.webp",
             "images/dian-wei-3.webp",
             "images/dian-wei-4.webp"
@@ -24,6 +25,7 @@ const products = [
         inStock: true,
         image: "images/lizard-1.webp",
         gallery: [
+            "images/lizard-1.webp",
             "images/lizard-2.webp",
             "images/lizard-3.webp",
             "images/lizard-4.webp"
@@ -40,6 +42,7 @@ const products = [
         inStock: false,
         image: "images/jihu-1.webp",
         gallery: [
+            "images/jihu-1.webp",
             "images/jihu-2.webp",
             "images/jihu-3.webp",
             "images/jihu-4.webp"
@@ -55,6 +58,7 @@ const products = [
         inStock: true,
         image: "images/fenrir-1.webp",
         gallery: [
+            "images/fenrir-1.webp",
             "images/fenrir-2.webp",
             "images/fenrir-3.webp",
             "images/fenrir-4.webp"
@@ -71,6 +75,7 @@ const products = [
         inStock: true,
         image: "images/xiao-yao-di-1.webp",
         gallery: [
+            "images/xiao-yao-di-1.webp",
             "images/xiao-yao-di-2.webp",
             "images/xiao-yao-di-3.webp",
             "images/xiao-yao-di-4.webp"
@@ -86,6 +91,7 @@ const products = [
         inStock: false,
         image: "images/sky-defender-1.webp",
         gallery: [
+            "images/sky-defender-1.webp",
             "images/sky-defender-2.webp",
             "images/sky-defender-3.webp",
             "images/sky-defender-4.webp"
@@ -101,6 +107,7 @@ const products = [
         inStock: true,
         image: "images/azure-falcon-1.webp",
         gallery: [
+            "images/azure-falcon-1.webp",
             "images/azure-falcon-2.webp",
             "images/azure-falcon-3.webp",
             "images/azure-falcon-4.webp"
@@ -116,6 +123,7 @@ const products = [
         inStock: true,
         image: "images/nether-emperor-1.webp",
         gallery: [
+            "images/nether-emperor-1.webp",
             "images/nether-emperor-2.webp",
             "images/nether-emperor-3.webp",
             "images/nether-emperor-4.webp"
@@ -132,6 +140,7 @@ const products = [
         inStock: true,
         image: "images/haoling-1.webp",
         gallery: [
+            "images/haoling-1.webp",
             "images/haoling-2.webp",
             "images/haoling-3.webp",
             "images/haoling-4.webp"
@@ -147,6 +156,7 @@ const products = [
         inStock: true,
         image: "images/colada-1.webp",
         gallery: [
+            "images/colada-1.webp",
             "images/colada-2.webp",
             "images/colada-3.webp",
             "images/colada-4.webp"
