@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Khiên lục giác -->
+  <polygon points="32,3 57,17.5 57,46.5 32,61 7,46.5 7,17.5" fill="#0d3b8a"/>
+  <polygon points="32,7.5 53,19.75 53,44.25 32,56.5 11,44.25 11,19.75" fill="none" stroke="#1461c5" stroke-width="2"/>
+  <!-- Mắt cảm biến -->
+  <polygon points="24,15 40,15 36,19 28,19" fill="#4fc3f7"/>
+  <!-- Chữ M dạng giáp -->
+  <path d="M17 45 V23 L32 34 L47 23 V45 H41 V33 L32 40 L23 33 V45 Z" fill="#ffffff"/>
+</svg>
