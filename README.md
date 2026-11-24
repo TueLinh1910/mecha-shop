@@ -85,3 +85,5 @@ mecha-shop/
 - Kết nối với backend thật để lưu đơn hàng
 
 ## Ghi chú
+
+Đây là dự án học tập, phi thương mại. Hình ảnh sản phẩm thuộc bản quyền của các chủ sở hữu.
