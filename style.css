@@ -601,4 +601,12 @@ textarea.form-control {
     .product-grid {
         gap: 12px;
     }
+
+        .filter-group {
+        width: 100%;
+    }
+
+    .filter-group select {
+        flex: 1;
+    }
 }
